@@ -2,11 +2,12 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.7.20"
+    id("maven-publish")
     `java-library`
 }
 
 group = "technology.cyan"
-version = "0.1"
+version = "0.2"
 
 repositories {
     mavenCentral()
