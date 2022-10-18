@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "technology.cyan"
-version = "0.2"
+version = "0.3"
 
 repositories {
     mavenCentral()
@@ -24,4 +24,12 @@ tasks.test {
 
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "11"
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            from(components["kotlin"])
+        }
+    }
 }
